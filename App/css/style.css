@@ -1,0 +1,119 @@
+body {
+	background-color: #cccccc;
+	color: #000;
+}
+input{
+	margin-top: 5px;
+}
+img{
+	margin: 0 auto;
+	width: 60px;
+	height: 60px;
+}
+
+textarea {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width : 250px;
+	height: 100px;
+}
+
+.container {
+	padding-top: 5px;
+	background-color: white;
+	display: block;
+}
+.main #content{
+	display: block;
+	min-height: 500px;
+}
+
+#content{
+	padding-top: 100px;
+}
+
+.selector{
+	margin: 20px auto;
+}
+
+.comment{
+	display: block;
+	height: 80px;
+	margin-top: 15px;
+	padding: 0 10px;
+	border-radius: 5px;
+	background-color: #e9ecef;
+}
+.task_inner{
+	display: flex;
+	justify-content: space-between;
+}
+
+.head__tasks{
+	display: flex;
+	justify-content:flex-start;
+	line-height: 1.6;
+}
+
+.head__tasks>div{
+	margin-right: 20px;
+}
+
+.options>span{
+	margin: 0 10px;
+}
+
+#pagination {
+	display: block;
+	width: 150px;
+	height: 50px;
+	margin: 10px auto;
+}
+
+ .res{
+	display: block;
+	float: right;
+}
+
+.isChanged {
+	font-weight: 400;
+	text-transform: uppercase;
+	color:#082567;
+	margin-right: 10px;
+}
+.resChange a{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.res .isPass{
+	text-align: center;
+	margin: 0
+}
+
+.resDel a{
+	color:red;
+}
+
+.resReturn {
+	text-transform: uppercase;
+	color:#00a550;
+}
+
+.mr-3{
+	margin: 10px;
+}
+.alert{
+	display: none;
+}
+
+#logOut{
+	display: none;
+
+}
+.comment.deleteElement{
+
+		background-color: #77dd77;
+}
+.displayNone{
+	display: none;
+}
