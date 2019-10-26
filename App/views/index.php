@@ -46,9 +46,10 @@ if (isset($pageData)){
               </div>
               <div class="options">
                 <span class='res isChanged <?if ($comment['isChanged']==0) echo "displayNone";?>'> Изменен Админом</span>
+                <span class='res resReturn <?if ($comment['isPass']==0) echo "displayNone";?>' > Выполнено</span>
               </div>
             </div>
-            
+
             <div class="text"  id="text<?=$comment['id']?>">TEXT: <?=$comment['text']?></div>
             <br>
           </div>
