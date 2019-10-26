@@ -39,13 +39,18 @@ if (isset($pageData)){
       <div class="comment">
         <div class="media">
           <div class="media-body">
-            ИМЯ: <?=$comment['name']?>  |  email: <?=$comment['email']?>
-            <div class="options">
-              <span class='res isChanged <?if ($comment['isChanged']==0) echo "displayNone";?>'> Изменен Админом</span>
-              <span class='res resReturn <?if ($comment['isPass']==0) echo "displayNone";?>' > Выполнено</span>
+            <div class="task_inner">
+              <div class="head__tasks">
+                <div class="name" id="name<?=$comment['id']?>">ИМЯ: <?=$comment['name']?></div>
+                <div class="email" id="email<?=$comment['id']?>">EMAIL: <?=$comment['email']?></div>
+              </div>
+              <div class="options">
+                <span class='res isChanged <?if ($comment['isChanged']==0) echo "displayNone";?>'> Изменен Админом</span>
+              </div>
             </div>
-            <br> TEXT: <?=$comment['text']?>
-
+            
+            <div class="text"  id="text<?=$comment['id']?>">TEXT: <?=$comment['text']?></div>
+            <br>
           </div>
         </div>
       </div>
