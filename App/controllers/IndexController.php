@@ -12,7 +12,7 @@ class IndexController extends Controller {
 	}
 
 	public function index() {
-		$comments= $this->model->getComm();
+		$comments= $this->model->getTask();
 		$this->pageData= $comments;
 		$this->view->render('App/views/index.php', 	$this->pageTpl , $this->pageData);
 	}
@@ -25,10 +25,9 @@ class IndexController extends Controller {
 		$this->view->renderPartial('App/views/pagination.php', $this->pageData);
 	}
 
-	public function showCom()
+	public function showTask()
 	{
-		//$page= isset($_POST['params']['page']) ? $_POST['params']['page'] : 1;
-		$comments= $this->model->getComm($_POST['params']);
+		$comments= $this->model->getTask($_POST['params']);
 		$this->pageData= $comments;
 		$this->view->renderPartial('App/views/index.php', $this->pageData);
 	}
@@ -79,25 +78,6 @@ class IndexController extends Controller {
 		// code...
 		echo $this->model->getPage();
 	}
-
-	public function isPass()
-	{
-		// code...
-		if (isset($_POST['params'])) {
-			// code...
-			//	echo $_POST['params']['isPass'];
-			echo $this->model->isPass($_POST['params']);
-		}
-	}
-
-	public function update()
-	{
-		// code...
-		if (isset($_POST['params'])) {
-			echo $this->model->update($_POST['params']);
-		}
-	}
-
 
 }
 ?>

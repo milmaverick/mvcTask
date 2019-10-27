@@ -32,6 +32,7 @@ textarea {
 	padding-top: 100px;
 }
 
+
 .selector{
 	margin: 20px auto;
 }
@@ -110,7 +111,7 @@ textarea {
 	display: none;
 
 }
-.comment.deleteElement{
+.comment.doneElement{
 
 		background-color: #77dd77;
 }

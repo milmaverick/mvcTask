@@ -13,7 +13,7 @@ class AdminController extends Controller
   public function logIn()
   {
     // code...
-    $user =$this->model->getAdmin();
+    $user =$this->model->getAdmin($_POST['params']['admin']);
 
     if($user)
     {
@@ -52,7 +52,24 @@ class AdminController extends Controller
     }
   }
 
-  
+  public function isPass()
+	{
+		// code...
+		if (isset($_POST['params'])) {
+			// code...
+			echo $this->model->isPass($_POST['params']);
+		}
+	}
+
+	public function update()
+	{
+		// code...
+		if (isset($_POST['params'])) {
+			echo $this->model->update($_POST['params']);
+		}
+	}
+
+
 
 
 
