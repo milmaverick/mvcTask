@@ -3,7 +3,7 @@ $(document).ready(async function()
 	await getPage();
 	//await pagination();
 	await isLogged();
-	//Отправка комментария--------------------
+	//Отправка задания--------------------
 
 	$("#form").submit(function(){
 		var formData = new FormData(this);
@@ -129,7 +129,7 @@ $(document).ready(async function()
 		});
 	});
 
-	//Измениние задания--------------------------------
+	//Изменение задания--------------------------------
 	$('#updateCom').on('click', function(){
 		var id = $("#idChange").val();
 		var name = $("#nameChange").val();
@@ -299,6 +299,7 @@ function isLogged (){
 		}
 	})
 }
+// получить страницу -------------------------------
 
 function getPage() {
 	$.ajax({
