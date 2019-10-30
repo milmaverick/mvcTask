@@ -9,13 +9,12 @@ class IndexModel extends Model
 
   public function getTask($page=1)
   {
-
     $_SESSION['page']= isset($page['page']) ? $page['page'] : 1;
     $sort=isset($page['sort']) ? $page['sort'] : 'date';
-    $limit= isset($page['page']) ? $page['page'] : 5;
-    $tpg=($limit-1)* 5 ;
+    $limit=3;
 
-    $query = 'SELECT * FROM `tasks` ORDER BY `date` ASC LIMIT '.$tpg.', 3';
+    $tpg=($_SESSION['page']-1)* $limit ;
+    $query = 'SELECT * FROM `tasks` ORDER BY `'.$sort.'` ASC LIMIT '.$tpg.', '.$limit;
     $comments = $this->db->query($query)->fetchAll();
     return $comments;
   }

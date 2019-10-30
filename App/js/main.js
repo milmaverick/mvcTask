@@ -1,7 +1,6 @@
 $(document).ready(async function()
 {
 	await getPage();
-	//await pagination();
 	await isLogged();
 	//Отправка задания--------------------
 
@@ -218,7 +217,7 @@ $(document).ready(async function()
 		});
 	});
 	$( "#selectorID" ).change(function() {
-	 	showTask();
+	 	pagination(1);
 	});
 });
 
